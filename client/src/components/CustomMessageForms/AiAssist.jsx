@@ -42,6 +42,7 @@ const AiAssist = ({ props, activeChat }) => {
 
     props.onSubmit(form)
     setMessage('')
+    setAppendText('')
     setAttachment('')
   }
 
