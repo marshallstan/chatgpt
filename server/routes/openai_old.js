@@ -43,7 +43,7 @@ router.post('/text', async (req, res) => {
 
     res.status(200).json({ text: response.data.choices[0].text })
   } catch (error) {
-    console.error('error', error)
+    console.error('error', error.message)
     res.status(500).json({ error: error.message })
   }
 })
@@ -76,7 +76,7 @@ router.post('/code', async (req, res) => {
 
     res.status(200).json({ text: response.data.choices[0].text })
   } catch (error) {
-    console.error('error', error.response.data.error)
+    console.error('error', error.message)
     res.status(500).json({ error: error.message })
   }
 })
@@ -97,7 +97,7 @@ router.post('/assist', async (req, res) => {
 
     res.status(200).json({ text: response.data.choices[0].text })
   } catch (error) {
-    console.error('error', error)
+    console.error('error', error.message)
     res.status(500).json({ error: error.message })
   }
 })
